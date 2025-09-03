@@ -5,4 +5,4 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	
-	character_body_2d.health -= 10
+	character_body_2d.health -= 50

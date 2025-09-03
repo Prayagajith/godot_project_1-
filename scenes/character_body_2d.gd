@@ -4,6 +4,9 @@ var health:= 100
 const SPEED = 500.0
 const JUMP_VELOCITY = -800.0
 const Antijumpvelocity = 200
+func _death_on_health_min():
+	if health <= 0:
+		get_tree().reload_current_scene()
 func _display_health():
 	label.text = "health : %d" % health
 func _physics_process(delta: float) -> void:
@@ -27,3 +30,4 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	_display_health()
+	_death_on_health_min()
